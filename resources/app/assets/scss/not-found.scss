@@ -1,0 +1,31 @@
+.not-found-box {
+    color: #37474F;
+    padding: 40px 20px;
+    max-width: 450px;
+    margin: 0px auto;
+    margin-top: 140px;
+    position: relative;
+    text-align: center;
+    border: 2px dashed #ccc;
+    @include border-radius(0.4em);
+    .error-code {
+        font-size: 72px;
+        line-height: 80px;
+    }
+    .error-status {
+        color: #78909c;
+        font-size: 18px;
+    }
+    .error-text {
+        font-size: 22px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .not-found-footer {
+        padding-top: 30px;
+        border-top: 2px dashed #ccc;
+        .form-control {
+            min-width: 180px;
+        }
+    }
+}

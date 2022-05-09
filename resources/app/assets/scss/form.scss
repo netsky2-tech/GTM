@@ -1,0 +1,21 @@
+.form-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &:before {
+        content: "";
+        width: 100%;
+        top: 14px;
+        left: 0px;
+        position: absolute;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    span {
+        z-index: 2;
+        font-size: 15px;
+        color: #263238;
+        padding-right: 10px;
+        position: relative;
+        background-color: #fff;
+    }
+}

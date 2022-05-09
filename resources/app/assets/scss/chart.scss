@@ -1,0 +1,43 @@
+.donut-chart-wrapper {
+    position: relative;
+    .donut-chart-label {
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        .donut-chart-value {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .donut-chart-title {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+}
+.donut-chart-legend {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #EBEBEB;
+    .legend-list {
+        margin-bottom: 18px;
+        @include flexbox();
+        .legend-bullet {
+            width: 8px;
+            height: 8px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: inline-block;
+            @include border-radius(50%);
+        }
+        .legend-title {
+            margin-top: -4px;
+        }
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+}

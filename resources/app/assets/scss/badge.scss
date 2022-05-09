@@ -1,0 +1,50 @@
+.badge {
+    display: inline-block;
+    line-height: 1;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 12px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include border-radius(50px);
+}
+.badge-yellow {
+    @extend .badge;
+    background-color: #FBC02D;
+}
+.badge-red {
+    @extend .badge;
+    background-color: #e33244;
+}
+.badge-grey {
+    @extend .badge;
+    background-color: #a0a0a0;
+}
+.badge-blue {
+    @extend .badge;
+    background-color: #3410b6;
+}
+.status-pill {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: #ccc;
+    @include border-radius(50%);
+}
+
+.status-pill-green {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: #00d248;
+    @include border-radius(50%);
+}
+
+.status-pill-red {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: #fb3e3e;
+    @include border-radius(50%);
+}

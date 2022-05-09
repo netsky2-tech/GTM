@@ -1,0 +1,143 @@
+.media-wrapper {
+    .media-header {
+        padding-top: 25px;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        .box-title {
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .box-description {
+            margin-top: 5px;
+        }
+    }
+    .media-row {
+        @include flexbox();
+        @media (max-width: 1000px) {
+            flex-wrap: wrap;
+        }
+        .media-box {
+            @extend .content-box;
+            width: 100%;
+            padding: 8px;
+            position: relative;
+            margin-right: 20px;
+            @media (max-width: 1000px) {
+                width: 46%;
+            }
+            @media (max-width: 570px) {
+                width: 100%;
+                margin-right: 0px;
+            }
+            .media-image {
+                height: 130px;
+                position: relative;
+                @include border-radius(0.3em);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    object-fit: cover;
+                }
+                .media-file-size {
+                    color: #fff;
+                    font-size: 12px;
+                    padding: 0px 8px;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    line-height: 22px;
+                    position: absolute;
+                    background-color: rgba(40, 50, 56, 0.61);
+                    @include border-radius(50px);
+                }
+                .media-zoom {
+                    color: rgba(255, 255, 255, 0.61);
+                    font-size: 35px;
+                    top: 50%;
+                    left: 50%;
+                    text-align: center;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+            .media-footer {
+                overflow: hidden;
+                margin-top: 10px;
+                .media-name {
+                    width: 50%;
+                    float: left;
+                }
+                .media-action {
+                    width: 50%;
+                    float: left;
+                    text-align: right;
+                    a {
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &:last-of-type {
+                margin-right: 0px;
+            }
+            &.selected {
+                color: #fff;
+                background: #263238;
+                &:after {
+                    content: "x";
+                    top: -8px;
+                    right: -8px;
+                    width: 28px;
+                    height: 28px;
+                    position: absolute;
+                    background: #cc0101;
+                    cursor: pointer;
+                    padding-bottom: 3px;
+                    font-size: 18px;
+                    align-items: center;
+                    justify-content: center;
+                    @include border-radius(50%);
+                    @include flexbox();
+                }
+                &:hover {
+                    background-color: #263238;
+                }
+                .media-footer {
+                    .media-action {
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: #f4f4f4;
+            }
+        }
+    }
+    .media-upload-button,
+    .media-search {
+        width: 100%;
+    }
+    .media-selected-files {
+        font-size: 16px;
+    }
+    .media-clear {
+        color: #bc0b0b;
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        &:hover {
+            color: #333;
+        }
+    }
+    .media-pagination {
+        border-top: 1px solid #EBEBEB;
+        padding-top: 20px;
+    }
+}

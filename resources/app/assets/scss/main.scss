@@ -1,0 +1,33 @@
+/*================================================================================
+TABLE OF CONTENTS
+
+1. Global
+2. Mixins
+3. Animations
+4. All element blocks stylesheets
+5. Overrides plugins stylesheet included with this template
+================================================================================*/
+
+/* 1. Global */
+@import "global";
+
+/* 2. Mixins */
+@import "mixin";
+
+/* 3. Animations */
+@import "animations";
+
+/* 4. All element blocks stylesheets */
+@import "layout";
+
+/* 5. Overrides plugins stylesheet included with this template */
+@import "plugin-overrides";
+
+@import "ajustes";
+
+@import "print";
+
+@import "tooltip";
+
+@import "multiselect";
+

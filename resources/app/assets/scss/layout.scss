@@ -1,0 +1,52 @@
+body {
+    &.mask {
+        &:before {
+            content: "";
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            background: rgba(0, 0, 0, 0.4);
+            position: fixed;
+        }
+    }
+    @import "auth";
+    .wrapper {
+        @import "top-nav";
+        @import "fixed-nav";
+        @import "compact-nav";
+        .wrapper-box {
+            width: 100%;
+            display: table;
+            padding: 20px;
+            table-layout: fixed;
+            margin: 60px auto 0px auto;
+            @import "side-nav";
+            .main {
+                display: table-cell;
+                vertical-align: top;
+                padding-left: 20px;
+                @media (max-width: 1000px) {
+                    width: 100%;
+                }
+                @import "content-box";
+                @import "dashboard";
+                @import "not-found";
+                @import "form";
+                @import "icon";
+                @import "chart";
+                @import "chat";
+                @import "badge";
+                @import "form-wizard";
+                @import "invoice";
+                @import "media";
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(/public/fonts/HelveticaNeue.ttf);
+}

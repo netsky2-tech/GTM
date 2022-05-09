@@ -1,0 +1,26 @@
+.icon-list-wrapper {
+    & > div {
+        margin-bottom: 20px;
+        .page-header {
+            color: #0275d8;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        a {
+            cursor: pointer;
+            color: #263238;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            display: block;
+            i {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+            &:hover {
+                color: #0275d8;
+            }
+        }
+    }
+}
